@@ -1,9 +1,11 @@
 import express from 'express';
 import studentRoute from './routers/studentRouters.js';
 const app = express();
+import cors from 'cors';
 
 //middleware
 app.use(express.json());
+app.use(cors());
 app.use(studentRoute);
 
 //responce from backend to the frontend
